@@ -12,5 +12,8 @@ Get_Player_Achievements = requests.get("http://api.steampowered.com/ISteamUserSt
 print(Get_Player_Achievements)
 Get_Player_Achievements_2 = Get_Player_Achievements.text
 print(Get_Player_Achievements_2)
-file = open("test.json", "w")
-file.close()
+dict1 = dict(test2)
+print(dict1)
+with open("test.json", "w") as file:
+    file.truncate(0)
+    json.dump(dict1, file)
