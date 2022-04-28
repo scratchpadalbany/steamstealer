@@ -1,6 +1,10 @@
-let jfile = require('./test.json');
+const jfile = require("./test.json");
+let stringjson = JSON.stringify(jfile);
+let testjson = JSON.parse(stringjson);
 console.log("Test")
-console.log(typeof(jfile));
-for(let i in jfile){
-    console.log(jfile[i]);
-}
+console.log(testjson.friendslist.friends);
+
+
+
+
+
